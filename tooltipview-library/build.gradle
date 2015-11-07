@@ -8,8 +8,8 @@ android {
   defaultConfig {
     minSdkVersion 14
     targetSdkVersion 23
-    versionCode 100
-    versionName "1.0.0"
+    versionCode 110
+    versionName "1.1.0"
   }
 }
 
@@ -21,7 +21,7 @@ publish {
   userOrg = 'hrules6872'
   groupId = 'com.hrules'
   artifactId = 'tooltipview'
-  version = '1.0.0'
+  version = '1.1.0'
   description = 'ToolTipView'
   website = 'https://github.com/hrules6872/ToolTipView'
   repository = "https://github.com/hrules6872/ToolTipView.git"

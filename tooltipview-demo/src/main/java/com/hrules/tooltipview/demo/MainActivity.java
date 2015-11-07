@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements ToolTipListener {
         gravity(Gravity.TOP).
         correctionY(5).
         listener(this).
-        hideOnTouch(true).
+        removeOnTouch(true).
         build();
 
     ToolTip toolTipText2 = new ToolTip.Builder(this).
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements ToolTipListener {
         correctionY(5).
         listener(this).
         hideOnTouch(true).
+        fadeInDelay(2000).
         moveDirection(ToolTip.DIRECTION_X_AXIS).
         drawable(
             new ToolTipDrawable.Builder(this).color(getResources().getColor(R.color.colorPrimary))

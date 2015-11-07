@@ -106,4 +106,8 @@ public class ToolTipRelativeLayout extends RelativeLayout
   @Override public void onShowedOnTouch(String tag) {
     setToolTipViewShowed(tag, true);
   }
+
+  @Override public void onRemoveOnTouch(String tag) {
+    removeToolTipView(tag);
+  }
 }

@@ -21,6 +21,7 @@ public class ToolTip {
 
   private boolean hideOnTouch;
   private boolean showedOnTouch;
+  private boolean removeOnTouch;
 
   private float correctionX;
   private float correctionY;
@@ -88,6 +89,7 @@ public class ToolTip {
 
     this.hideOnTouch = builder.hideOnTouch;
     this.showedOnTouch = builder.showedOnTouch;
+    this.removeOnTouch = builder.removeOnTouch;
 
     this.correctionX = builder.correctionX;
     this.correctionY = builder.correctionY;
@@ -157,6 +159,14 @@ public class ToolTip {
 
   public void setShowedOnTouch(boolean showedOnTouch) {
     this.showedOnTouch = showedOnTouch;
+  }
+
+  public boolean isRemoveOnTouch() {
+    return removeOnTouch;
+  }
+
+  public void setRemoveOnTouch(boolean removeOnTouch) {
+    this.removeOnTouch = removeOnTouch;
   }
 
   public float getCorrectionX() {
@@ -341,6 +351,7 @@ public class ToolTip {
 
     private boolean hideOnTouch;
     private boolean showedOnTouch;
+    private boolean removeOnTouch;
 
     private float correctionX;
     private float correctionY;
@@ -415,6 +426,11 @@ public class ToolTip {
 
     public Builder showedOnTouch(boolean showedOnTouch) {
       this.showedOnTouch = showedOnTouch;
+      return this;
+    }
+
+    public Builder removeOnTouch(boolean removeOnTouch) {
+      this.removeOnTouch = removeOnTouch;
       return this;
     }
 

@@ -231,6 +231,9 @@ class ToolTipView extends TextView
     if (toolTip.isShowedOnTouch()) {
       toolTipLayoutListener.onShowedOnTouch(tag);
     }
+    if (toolTip.isRemoveOnTouch()) {
+      toolTipLayoutListener.onRemoveOnTouch(tag);
+    }
     if (toolTip.getListener() != null) {
       toolTip.getListener().onClick(tag);
     }
