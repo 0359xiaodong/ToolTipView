@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="default_background_corner_radius">2dp</dimen>
+  <dimen name="default_text_padding_left">10dp</dimen>
+  <dimen name="default_text_padding_top">4dp</dimen>
+  <dimen name="default_text_padding_right">10dp</dimen>
+  <dimen name="default_text_padding_bottom">4dp</dimen>
+  <dimen name="default_text_size">11sp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">ToolTipView-demo</string>
+  <string name="awesome_1">Awesome feature #1</string>
+  <string name="awesome_2">Awesome feature #2</string>
+  <string name="awesome_3">Awesome feature #3</string>
+  <string name="tool_tip">tooltip #%d</string>
+</resources>

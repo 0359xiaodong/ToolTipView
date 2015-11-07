@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="default_fadein_duration">800</integer>
+  <integer name="default_fadein_delay">500</integer>
+  <integer name="default_move_delay">800</integer>
+  <integer name="default_move_duration">675</integer>
+  <integer name="default_move_distance">7</integer>
+</resources>
