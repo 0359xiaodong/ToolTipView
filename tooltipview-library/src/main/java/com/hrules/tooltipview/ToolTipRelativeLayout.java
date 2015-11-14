@@ -10,8 +10,9 @@ import android.widget.RelativeLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ToolTipRelativeLayout extends RelativeLayout
-    implements ToolTipLayout, ToolTipLayoutListener {
+public class ToolTipRelativeLayout extends RelativeLayout implements ToolTipLayout {
+  private static final boolean DEFAULT_TOOLTIPVIEW_VISIBILITY = true;
+
   private static final String PREFS_FILENAME = "PrefsToolTipView";
   private static final String PREFS_PREFIX = "PrefsToolTipView_";
 
@@ -45,6 +46,10 @@ public class ToolTipRelativeLayout extends RelativeLayout
     preferences = context.getSharedPreferences(PREFS_FILENAME, Context.MODE_PRIVATE);
   }
 
+  public void addToolTipView(ToolTip attention, String tag) {
+    addToolTipView(attention, tag, DEFAULT_TOOLTIPVIEW_VISIBILITY);
+  }
+
   public void addToolTipView(ToolTip toolTip, String tag, boolean show) {
     if (toolTip == null) {
       throw new IllegalArgumentException("ToolTip must not be null");
@@ -57,12 +62,28 @@ public class ToolTipRelativeLayout extends RelativeLayout
     }
 
     ToolTipView toolTipView = new ToolTipView(context);
-    toolTipView.create(toolTip, tag, this);
+    toolTipView.create(toolTip, tag, new ToolTipLayoutListener() {
+      @Override public void onHideOnTouch(String tag) {
+        hideToolTipView(tag);
+      }
+
+      @Override public void onShowedOnTouch(String tag) {
+        setToolTipViewShowed(tag, true);
+      }
+
+      @Override public void onRemoveOnTouch(String tag) {
+        removeToolTipView(tag);
+      }
+    });
     if (show) {
       toolTipView.setVisibility(View.VISIBLE);
     }
     addView(toolTipView);
     toolTipViews.put(tag, toolTipView);
+  }
+
+  public boolean containsToolTipView(String tag) {
+    return toolTipViews.containsKey(tag);
   }
 
   public boolean removeToolTipView(String tag) {
@@ -97,17 +118,5 @@ public class ToolTipRelativeLayout extends RelativeLayout
     String prefs = PREFS_PREFIX + tag;
     preferences.edit().putBoolean(prefs, showed).apply();
     return prefs;
-  }
-
-  @Override public void onHideOnTouch(String tag) {
-    hideToolTipView(tag);
-  }
-
-  @Override public void onShowedOnTouch(String tag) {
-    setToolTipViewShowed(tag, true);
-  }
-
-  @Override public void onRemoveOnTouch(String tag) {
-    removeToolTipView(tag);
   }
 }

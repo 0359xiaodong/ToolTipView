@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements ToolTipListener {
 
     ToolTipRelativeLayout toolTipRelativeLayout =
         (ToolTipRelativeLayout) findViewById(R.id.toolTipRelativeLayout);
-    toolTipRelativeLayout.addToolTipView(toolTipText1, TAG_TOOLTIPVIEW_AWESOME_1, true);
-    toolTipRelativeLayout.addToolTipView(toolTipText2, TAG_TOOLTIPVIEW_AWESOME_2, true);
+    toolTipRelativeLayout.addToolTipView(toolTipText1, TAG_TOOLTIPVIEW_AWESOME_1);
+    toolTipRelativeLayout.addToolTipView(toolTipText2, TAG_TOOLTIPVIEW_AWESOME_2);
 
     ToolTipFrameLayout toolTipFrameLayout =
         (ToolTipFrameLayout) findViewById(R.id.toolTipFrameLayout);
-    toolTipFrameLayout.addToolTipView(toolTipText3, TAG_TOOLTIPVIEW_AWESOME_3, true);
+    toolTipFrameLayout.addToolTipView(toolTipText3, TAG_TOOLTIPVIEW_AWESOME_3);
   }
 
   @Override public void onClick(String tag) {

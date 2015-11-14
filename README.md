@@ -6,7 +6,7 @@ ToolTipView
 Add this dependency to your build.gradle file:
 ```java
 dependencies {
-    compile 'com.hrules:tooltipview:1.1.0'
+    compile 'com.hrules:tooltipview:1.2.0'
 }
 ```
 

@@ -8,12 +8,12 @@ android {
     applicationId "com.hrules.tooltipview.demo"
     minSdkVersion 14
     targetSdkVersion 23
-    versionCode 110
-    versionName "1.1.0"
+    versionCode 120
+    versionName "1.2.0"
   }
 }
 
 dependencies {
-  compile 'com.android.support:appcompat-v7:23.1.0'
+  compile 'com.android.support:appcompat-v7:23.+'
   compile project(':tooltipview-library')
 }

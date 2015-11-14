@@ -8,20 +8,20 @@ android {
   defaultConfig {
     minSdkVersion 14
     targetSdkVersion 23
-    versionCode 110
-    versionName "1.1.0"
+    versionCode 120
+    versionName "1.2.0"
   }
 }
 
 dependencies {
-  compile 'com.android.support:support-annotations:23.1.0'
+  compile 'com.android.support:support-annotations:23.+'
 }
 
 publish {
   userOrg = 'hrules6872'
   groupId = 'com.hrules'
   artifactId = 'tooltipview'
-  version = '1.1.0'
+  version = '1.2.0'
   description = 'ToolTipView'
   website = 'https://github.com/hrules6872/ToolTipView'
   repository = "https://github.com/hrules6872/ToolTipView.git"
